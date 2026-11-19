@@ -158,6 +158,9 @@ def test_registry_backfill_promotion_failure_and_rollback(isolated, registry_ser
         assert_parity(client, model, threshold, lambda model, texts: model.predict_proba(texts)[:, 1])
 
     with TestClient(app, base_url=URL) as client:
+        if client.get("/api/status").json()["mlflow_registry"]["sync"] != "confirmed":
+            store.reconcile_registry()
+            pytest.fail("Startup did not synchronize champion, but explicit reconciliation succeeded.")
         check_champion(client, baseline)
         initial_alias = alias_version()
         post(client, "/api/registry/reconcile")
