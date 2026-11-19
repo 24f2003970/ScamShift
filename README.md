@@ -85,10 +85,22 @@ The smoke test uses an isolated temporary directory and covers inference, input 
 
 Run MLflow and the app in separate terminals from the repository root. Keep both bound to loopback. Start the MLflow server in an activated environment with `requirements.txt` installed.
 
-```sh
+In Windows PowerShell, use a local artifact URI. Run the API and MLflow server on the same machine so both can access it.
+
+```powershell
+New-Item -ItemType Directory -Force runtime/registry-artifacts | Out-Null
+$artifactUri = ([uri](Resolve-Path runtime/registry-artifacts).Path).AbsoluteUri
+python -m mlflow server --host 127.0.0.1 --port 5000 --workers 1 --backend-store-uri sqlite:///runtime/registry-tracking.db --no-serve-artifacts --default-artifact-root $artifactUri
+```
+
+On macOS or Linux, use MLflow's artifact proxy.
+
+```bash
 python -c "from pathlib import Path; Path('runtime/registry-artifacts').mkdir(parents=True, exist_ok=True)"
 python -m mlflow server --host 127.0.0.1 --port 5000 --workers 1 --backend-store-uri sqlite:///runtime/registry-tracking.db --artifacts-destination runtime/registry-artifacts
 ```
+
+MLflow records an artifact location when it creates an experiment. Use a fresh registry tracking database for these commands if you already ran the classroom demo with a different artifact setting. Keep the old database and artifact directory for historical runs.
 
 In a second activated terminal, set the following environment variables before starting the API. Use a fresh state directory for the classroom trial. Use an offline copy of an existing state directory to demonstrate backfill.
 

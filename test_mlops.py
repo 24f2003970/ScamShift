@@ -94,12 +94,16 @@ def registry_server(tmp_path, monkeypatch):
         port = listener.getsockname()[1]
     uri = f"{URL}:{port}"
     log_path = server_folder / "server.log"
+    artifacts = server_folder / "artifacts"
+    if os.name == "nt":
+        artifact_options = ["--no-serve-artifacts", "--default-artifact-root", artifacts.as_uri()]
+    else:
+        artifact_options = ["--artifacts-destination", str(artifacts)]
     server_env = {**os.environ, "MLFLOW_HTTP_REQUEST_MAX_RETRIES": "0", "MLFLOW_HTTP_REQUEST_TIMEOUT": "5"}
     with log_path.open("wb") as log:
         proc = subprocess.Popen(
             [sys.executable, "-m", "mlflow", "server", "--host", "127.0.0.1", "--port", str(port),
-             "--workers", "1", "--backend-store-uri", "sqlite:///tracking.db", "--artifacts-destination",
-             str(server_folder / "artifacts")],
+             "--workers", "1", "--backend-store-uri", "sqlite:///tracking.db", *artifact_options],
             cwd=server_folder, env=server_env, stdout=log, stderr=subprocess.STDOUT,
         )
         try:
