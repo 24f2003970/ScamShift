@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>ScamShift · Message risk and model operations</title>
+  <link rel="stylesheet" href="/style.css">
+  <script defer src="/app.js"></script>
+</head>
+<body>
+  <header class="bar"><div class="shell bar-inner">
+    <a class="brand" href="#scan"><span class="logo" aria-hidden="true">S</span> Scam<span>Shift</span></a>
+    <nav aria-label="Workspace"><a href="#scan" data-tab="scan">Message scan</a><a href="#replay" data-tab="replay">Campaign replay</a><a href="#models" data-tab="models">Model registry</a></nav>
+    <span id="live" class="live"><i></i> Connecting</span>
+  </div></header>
+  <main class="shell">
+    <section class="hero">
+      <p class="eyebrow">MESSAGE RISK / MODEL OPERATIONS</p>
+      <h1>ScamShift</h1>
+      <p>Inspect suspicious messages, replay emerging scam campaigns, and compare model versions.</p>
+    </section>
+    <div id="notice" role="status" aria-live="polite" hidden></div>
+    <section id="scan-panel" class="panel" aria-labelledby="scan-title">
+      <div class="grid">
+        <article class="card">
+          <div class="card-head"><div><p class="eyebrow">INFERENCE</p><h2 id="scan-title">Message scanner</h2></div><span class="tag">SMS / CHAT</span></div>
+          <form id="scan-form">
+            <label for="message">Message text</label>
+            <textarea id="message" minlength="3" maxlength="2500" required placeholder="Paste an SMS or chat message…"></textarea>
+            <div class="actions"><button type="submit" class="primary">Analyze message <span aria-hidden="true">↗</span></button><button id="sample" type="button">Load sample</button></div>
+          </form>
+        </article>
+        <article class="card score" aria-live="polite">
+          <div class="card-head"><div><p class="eyebrow">MODEL OUTPUT</p><h2>Risk assessment</h2></div><span class="tag" id="scan-version">—</span></div>
+          <div class="score-number" id="score-number">—</div>
+          <meter id="risk" min="0" max="1" value="0" aria-label="Scam score"></meter>
+          <p id="verdict" class="muted">Analyze a message to view its score.</p>
+          <div id="cues"></div>
+          <div id="scan-review" hidden><p class="muted">Save your label for the next training run.</p><div class="actions" id="scan-labels"></div></div>
+        </article>
+      </div>
+      <article class="card evasion">
+        <div><p class="eyebrow">ROBUSTNESS</p><h2>Evasion lab</h2><p class="muted">Test whether punctuation, spacing or Hindi script changes the score.</p></div>
+        <button id="variant">Load obfuscated example</button>
+      </article>
+    </section>
+    <section id="replay-panel" class="panel" hidden aria-labelledby="replay-title">
+      <article class="card">
+        <div class="card-head"><div><p class="eyebrow">MONITORING</p><h2 id="replay-title">Campaign replay</h2><p class="muted">Run a labeled Hinglish batch through the active model and a candidate.</p></div></div>
+        <form id="replay-form" class="controls">
+          <label>Message batch<select id="cohort"><option value="audit">Evaluation batch</option><option value="review">Review queue</option></select></label>
+          <label>Compare against<select id="candidate"><option value="">Active model only</option></select></label>
+          <button class="primary">Run replay ↗</button>
+        </form>
+      </article>
+      <div class="comparison" id="comparison"></div>
+      <div id="campaigns"></div>
+    </section>
+    <section id="models-panel" class="panel" hidden aria-labelledby="models-title">
+      <article class="card">
+        <div class="card-head"><div><p class="eyebrow">MODEL LIFECYCLE</p><h2 id="models-title">Model registry</h2><p id="review-count" class="muted"></p></div><button id="train" class="primary">Train candidate ↗</button></div>
+        <div id="models"></div>
+      </article>
+      <article class="card history"><h2>Deployment activity</h2><div id="history"></div></article>
+    </section>
+    <footer><span>ScamShift · Local research demo</span><span><a href="/docs">API docs ↗</a> <span id="scans"></span></span></footer>
+  </main>
+</body>
+</html>
