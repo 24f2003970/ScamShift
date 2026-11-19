@@ -22,7 +22,7 @@ def wait_ready():
     while monotonic() < deadline:
         try:
             return read("/api/readiness")["active"]
-        except (URLError, TimeoutError):
+        except (URLError, TimeoutError, ConnectionError):
             sleep(2)
     raise SystemExit("Container did not become ready within 180 seconds.")
 
