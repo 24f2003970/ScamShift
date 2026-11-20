@@ -24,6 +24,18 @@ jobs:
       - run: python -m pip install -r requirements-dev.txt
       - run: python -m compileall -q scamshift main.py train.py smoke_test.py test_core.py evaluate_holdout.py tune_campaign.py maintain_data.py
       - run: python -m pytest -q
+      - name: Run the labelled-batch monitoring assessment
+        if: runner.os == 'Linux'
+        run: |
+          python train.py
+          python monitor_retrain.py --batch data/incoming_demo.csv --champion-dir runtime/baseline
+      - name: Save monitoring reports and candidate model
+        if: runner.os == 'Linux'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: monitoring-assessment
+          path: runtime/monitoring/
+          if-no-files-found: error
       - run: python smoke_test.py
       - if: runner.os == 'Windows'
         shell: cmd

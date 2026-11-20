@@ -167,6 +167,10 @@ Precision counts how many flagged messages were true positives. Recall counts ho
 
 SQLite persists labels, training phases, retry links, model versions and deployment history. Startup marks in-flight jobs interrupted so operators can retry. MLflow records fit settings, dataset and code fingerprints, dependency versions, training duration, an evaluation report and the verified artifact checksum. It uses `runtime/mlruns` by default. Set `MLFLOW_TRACKING_URI` to use an existing tracking server. The SQLite registry is the serving authority.
 
+## Monitoring and retraining practical
+
+Validate a labelled batch, evaluate the saved champion, retrain a candidate and record a promotion decision. See the [assessment instructions](docs/Monitoring-Assessment.md) and [execution report](evidence/monitoring/report.md).
+
 ## Drift monitoring
 
 Reports compare two adjacent windows of 1–30 days. Input features use coarse length, word count, writing script, URL, digit, punctuation and formatting categories. Prediction distributions use only observations from the same active model in both windows. Deployment mix is reported separately. The monitor uses Jensen–Shannon distance from 0 to 1, with heuristic warning and significant cutoffs at 0.20 and 0.35. Each comparison requires the selected minimum support. These reports identify distribution shifts. Concept drift requires labeled outcomes and performance comparisons.

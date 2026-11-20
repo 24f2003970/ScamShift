@@ -1,0 +1,16 @@
+{
+  "valid": true,
+  "rows": 30,
+  "columns": [
+    "id",
+    "text",
+    "label"
+  ],
+  "missing_values": 0,
+  "duplicate_records_or_ids": 0,
+  "target_distribution": {
+    "0": 12,
+    "1": 18
+  },
+  "batch_sha256": "546f0798b12740bd18e94332d676830117ded512077d1ba2a1b5d10f78b9aa9a"
+}

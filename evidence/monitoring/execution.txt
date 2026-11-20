@@ -1,0 +1,8 @@
+Champion before workflow: 1 4089eda45aa3102384c3b7915e9b8eb050627079bb1179789ca751b636a6f9fa
+Task A: {"valid": true, "rows": 30, "columns": ["id", "text", "label"], "missing_values": 0, "duplicate_records_or_ids": 0, "target_distribution": {"0": 12, "1": 18}, "batch_sha256": "546f0798b12740bd18e94332d676830117ded512077d1ba2a1b5d10f78b9aa9a"}
+Task B: {"accuracy": 0.4, "recall": 0.0, "recall_ci95": [0, 0.1758845505823749], "false_alarm": 0.0, "false_alarm_ci95": [0, 0.2425007574992425], "precision": null, "f1": 0.0, "average_precision": 0.6345572571784542, "roc_auc": 0.5462962962962963, "caught": 0, "missed": 18, "false_flags": 0, "genuine": 12, "positives": 18, "negatives": 12, "total": 30, "confusion": {"tp": 0, "fp": 0, "fn": 18, "tn": 12}}
+Task C: candidate saved: runtime/monitoring/20261120T050716Z-f6851f0b/candidate.pkl MLflow run: c6c7b5f78f4a4dc189c0c9bdca0e21fc
+Task D: retain_champion (champion unchanged)
+Task E: evidence: runtime/monitoring/20261120T050716Z-f6851f0b
+Champion after workflow: 1 4089eda45aa3102384c3b7915e9b8eb050627079bb1179789ca751b636a6f9fa
+

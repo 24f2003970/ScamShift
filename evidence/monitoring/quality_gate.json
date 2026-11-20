@@ -1,0 +1,50 @@
+{
+  "decision": "retain_champion",
+  "checks": [
+    {
+      "label": "Benchmark and campaign datasets match the active version",
+      "pass": true,
+      "actual": "Compared available fingerprints"
+    },
+    {
+      "label": "Benchmark recall at least 85%",
+      "pass": true,
+      "actual": "93.8%"
+    },
+    {
+      "label": "Benchmark false alarms at most 3%",
+      "pass": true,
+      "actual": "0.4%"
+    },
+    {
+      "label": "Benchmark recall loss at most 2 percentage points",
+      "pass": true,
+      "actual": "+1.24 pp"
+    },
+    {
+      "label": "Benchmark false-alarm increase at most 1 percentage point",
+      "pass": true,
+      "actual": "+0.09 pp"
+    },
+    {
+      "label": "Campaign false alarms at most 25%",
+      "pass": true,
+      "actual": "25.0%"
+    },
+    {
+      "label": "Campaign recall improves, or recall holds and false alarms fall",
+      "pass": true,
+      "actual": "Recall 0.0% to 100.0%, false alarms 0.0% to 25.0%"
+    },
+    {
+      "label": "Benchmark F1 does not decrease",
+      "pass": false,
+      "actual": [
+        0.9622641509433962,
+        0.9526813880126183
+      ]
+    }
+  ],
+  "champion_overwritten": false,
+  "justification": "Scam recall is primary because missed scams expose users to fraud. False-alarm limits protect genuine messages; benchmark F1 balances precision and recall on the imbalanced SMS corpus. Both models use identical untouched evaluation cohorts."
+}

@@ -1,0 +1,31 @@
+id,text,label
+7012e856763f46a1d52dd84cebb62f0b9645ca13ca3643f73f4574d414bf0015,"Aapka KYC expire ho gaya, OTP share karo warna account block hoga",1
+22ee86a8b7d67cf7b2ee3a032b0cff1e6f3efeac9338ab5454c98713c19a5d98,KYC pending hai. Account unblock karne ke liye OTP bhejo,1
+1ed18ca6e9abe028587b77d65c9e0f0aa6212880835547d097fde83a0c2ac34f,"Bank se bol raha hu, KYC verify ke liye OTP share karo",1
+bdaf599d5666beb6bab93870467b888125fa71af761b67595ffc9dd0a3b70552,Aaj KYC renew karo: PIN aur OTP reply kar do,1
+78ea49444a044b1fcc4adc34e6bb224bbfc1caab357fd70e73db63d02389ef55,Account suspend hone wala hai. OTP do aur KYC activate karo,1
+84916493e41749d004e4fc843961e34daa57fdd7a966061a92e2faa87dfc791f,Bank account unblock karna hai toh KYC OTP batayein,1
+6172d1ca74cdd825e69b62640c9f4a3f8cc39d98bbd0681422b86a434416bb01,Papa bank ja rahe hain KYC karwane,0
+98fa6410b9d22ddf04b5ddf977dd6a91e5c2146985d992a6a6a36b66a3a31cab,OTP kisi ke saath share mat karna,0
+0c174d2f3c6886f45ecf68bc265042206ca6c30709784cf9d56188330859e7bd,KYC form branch mein submit kar diya,0
+60c6070a6caa12dbf004cf4e7d4e7706427e4fc828c87562d925e9f16899be98,"Main bank se laut raha hu, chai bana dena",0
+10357d552f179b2c57fe7f2bae1d98855dcdf6ec783009123dd00720e1c15acf,"Parcel hold hai, release ke liye UPI se fee pay karo",1
+d2077ddec669286e892cc1e9cfa0f02fea782626637fecd196630ce15f717e2d,"Courier ruka hai, UPI se 5 rupaye bhejo warna return hoga",1
+1e09cc7ca76a502bc83ebbda84393d89adc220fd90f7cf3ed5a190f366af6331,Delivery fail. Parcel release fee pay karo at parcel.example,1
+2d9e7e0d378625d359bf97f265890a6b7c00e3bdc5b35c4eedd7b93b26c577fb,Package release ke liye UPI payment bhejo abhi,1
+4e4111fb2ca798163cfcec18ee6a8b58cd54fe63ed4ba7bf3d5a17e50b8a11c5,"Courier parcel customs mein hold hai, fee bhejne ka screenshot do",1
+81c641f5cd56b1e091bdb61955b2aabf3999252be46d96f72f31fd2544d35320,Parcel wapas jayega agar release fee UPI pe nahi di,1
+d35157a42821f39d2fac0dacd45e1717abd751a3e953457b8aa60714ea908667,Parcel gate pe rakh diya hai,0
+9ab07ee81db2bb2e47b7da4f5c9c66780210711f23d031c7c41e08179caa781f,Courier ne delivery reschedule kar di,0
+38b6ee69030cdf71ebdd0c7c2eabf3ba347d3512c9e1ae838a003cf1af9bfbf9,Kal tumhara parcel collect kar lunga,0
+ff9179f00cfe4521f021d295b15e30a2de789925b13bf2f26d0c88088a9a889b,UPI se lunch ka hissa bhej dena,0
+303efc4cef0934ff1176aad37b2b52d81744a41ae927495a037a5300a8f4dd56,"Ghar se kaam, task unlock karne ke liye deposit karo",1
+3a5356ca63afef1daf7d4860feb9c99dc3f6a811b731836153e05f179491bcb5,"Roz 5000 kamao, job registration fee deposit karo",1
+ecdb07fddeab8f1f5dee1bc62e8e8ab2aa26229629f64db7cd8716bb463b3c07,Part time job: pehle deposit do phir task aur earning milegi,1
+c901de5008c79c4c20b7c6b53a362c33352c6f01a633053da450c18db182e91d,"Online task join karo, refundable deposit se earning unlock",1
+ea89935ecaf190ee1235fb56465ecd72a65065a08ffeb8f3a03a1e548b17bc53,Job confirm karne ke liye deposit UPI par abhi bhejo,1
+298109d355260ab53b820d018e3001eb4319930376ce2dc4345daea55523571e,Task complete kar liya? Commission nikalne ke liye deposit karo,1
+4d99bd89a58a1bb096d7fd5db2a118830dfacaee0788bb360a9b97493f5b2bfb,Job interview kal dopahar ko hai,0
+b4cc846f2c8d9270311905967bbefd652a0876d7c8f8de5a11d14bf625cb2d6b,Task complete karke report send karna,0
+c77106e176071e302e91287be25f49394938bf967b6ec5f6731042bda62406ac,Job application submit ho gayi,0
+d6d88515382c2e4c78116e5b9c91e5ed20c15b0adf97eddecee5fc841ae2344f,Security deposit receipt landlord ne bheji,0

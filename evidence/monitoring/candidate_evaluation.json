@@ -1,0 +1,129 @@
+{
+  "threshold": 0.5,
+  "feedback_weight": 18,
+  "training_rows": 3869,
+  "reviewed_rows": 30,
+  "dataset_sha256": "7d039a24a6083ed9ef0f806ebad56bbb976e3aeb8de05669173bfdc4996c239d",
+  "campaign_sha256": "d9ffcdcd78ca8d347840e82705726ec454df667f0e97d799ad20fce6425dfca3",
+  "validation_sha256": "72ff85cee8ce1d9e2723ef18d2d0e0f88eb044fb92156dad66ca699673ecb27d",
+  "validation_rows": 12,
+  "training_seconds": 0.517705400000068,
+  "model_type": "Logistic regression with word and character TF-IDF",
+  "hyperparameters": {
+    "C": 4,
+    "class_weight": "balanced",
+    "dual": false,
+    "fit_intercept": true,
+    "intercept_scaling": 1,
+    "l1_ratio": 0.0,
+    "max_iter": 500,
+    "n_jobs": null,
+    "penalty": "deprecated",
+    "random_state": 42,
+    "solver": "lbfgs",
+    "tol": 0.0001,
+    "verbose": 0,
+    "warm_start": false
+  },
+  "preprocessing": "baseline",
+  "feedback_sha256": "89d98d02d62a07f525e7f74dff2613c38aaa17896a0467453848dcb40a1f2ef1",
+  "validation": {
+    "accuracy": 0.6666666666666666,
+    "recall": 0.3333333333333333,
+    "recall_ci95": [
+      0.09676933255921683,
+      0.7000116786584712
+    ],
+    "false_alarm": 0.0,
+    "false_alarm_ci95": [
+      0,
+      0.3903430336530645
+    ],
+    "precision": 1.0,
+    "f1": 0.5,
+    "average_precision": 0.7569444444444443,
+    "roc_auc": 0.6944444444444444,
+    "caught": 2,
+    "missed": 4,
+    "false_flags": 0,
+    "genuine": 6,
+    "positives": 6,
+    "negatives": 6,
+    "total": 12,
+    "confusion": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 4,
+      "tn": 6
+    }
+  },
+  "benchmark": {
+    "accuracy": 0.9883720930232558,
+    "recall": 0.937888198757764,
+    "recall_ci95": [
+      0.8894506498020941,
+      0.9659159566855887
+    ],
+    "false_alarm": 0.0044286979627989375,
+    "false_alarm_ci95": [
+      0.0018930859573037173,
+      0.010325391895204521
+    ],
+    "precision": 0.967948717948718,
+    "f1": 0.9526813880126183,
+    "average_precision": 0.9889849990292661,
+    "roc_auc": 0.9975243303313547,
+    "caught": 151,
+    "missed": 10,
+    "false_flags": 5,
+    "genuine": 1124,
+    "positives": 161,
+    "negatives": 1129,
+    "total": 1290,
+    "confusion": {
+      "tp": 151,
+      "fp": 5,
+      "fn": 10,
+      "tn": 1124
+    }
+  },
+  "campaign_audit": {
+    "accuracy": 0.875,
+    "recall": 1.0,
+    "recall_ci95": [
+      0.7574992425007574,
+      1
+    ],
+    "false_alarm": 0.25,
+    "false_alarm_ci95": [
+      0.08894003962896138,
+      0.53231033912066
+    ],
+    "precision": 0.8,
+    "f1": 0.8888888888888888,
+    "average_precision": 0.9866452991452991,
+    "roc_auc": 0.9861111111111112,
+    "caught": 12,
+    "missed": 0,
+    "false_flags": 3,
+    "genuine": 9,
+    "positives": 12,
+    "negatives": 12,
+    "total": 24,
+    "confusion": {
+      "tp": 12,
+      "fp": 3,
+      "fn": 0,
+      "tn": 9
+    }
+  },
+  "artifact_sha256": "69f99e58cab70f28bfec71694dbd594386b9b4f42f801c70203deafc0afdcdb5",
+  "code_sha256": "fbdb02d4e39556529138a99faad53e289f0ad2c17254c217046c6e939283a0fd",
+  "environment": {
+    "python": "3.12.5",
+    "scikit-learn": "1.8.0",
+    "numpy": "2.2.5",
+    "scipy": "1.17.1",
+    "mlflow-skinny": "3.17.2"
+  }
+}

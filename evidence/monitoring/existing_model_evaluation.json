@@ -1,0 +1,30 @@
+{
+  "accuracy": 0.4,
+  "recall": 0.0,
+  "recall_ci95": [
+    0,
+    0.1758845505823749
+  ],
+  "false_alarm": 0.0,
+  "false_alarm_ci95": [
+    0,
+    0.2425007574992425
+  ],
+  "precision": null,
+  "f1": 0.0,
+  "average_precision": 0.6345572571784542,
+  "roc_auc": 0.5462962962962963,
+  "caught": 0,
+  "missed": 18,
+  "false_flags": 0,
+  "genuine": 12,
+  "positives": 18,
+  "negatives": 12,
+  "total": 30,
+  "confusion": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 18,
+    "tn": 12
+  }
+}
